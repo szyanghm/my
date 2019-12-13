@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="non-valent-cloud" />
+        <module name="non-valent-config" />
+        <module name="non-valent-nacos" />
+        <module name="non-valent-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="non-valent-cloud" target="1.8" />
+      <module name="non-valent-config" target="1.8" />
+      <module name="non-valent-nacos" target="1.8" />
+      <module name="non-valent-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="non-valent-cloud" options="-parameters" />
+      <module name="non-valent-config" options="-parameters" />
+      <module name="non-valent-nacos" options="-parameters" />
+      <module name="non-valent-service" options="-parameters" />
+    </option>
+  </component>
+</project>
