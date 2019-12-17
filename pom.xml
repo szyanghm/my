@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.2.RELEASE</version>
+		<version>2.1.9.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -18,10 +18,12 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<fastjson.version>1.2.58</fastjson.version>
+		<spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
 	</properties>
 
 	<modules>
-		<module>non-valent-nacos</module>
+		<module>non-valent-eureka</module>
+		<module>non-valent-service</module>
 	</modules>
 
 	<dependencies>
@@ -44,7 +46,21 @@
 	</dependencies>
 
 	<dependencyManagement>
+		<!--Spring Cloud 版本序列配置-->
 		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring.cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+				<exclusions>
+					<exclusion>
+						<groupId>redis.clients</groupId>
+						<artifactId>jedis</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
