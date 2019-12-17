@@ -1,0 +1,14 @@
+2019-12-16 10:46:39,957 WARN [dump-ignore] ignore to save cache file. groupKey=example.properties+DEFAULT_GROUP, md5=b54f63e58da12198344316a61a93add0, lastModifiedOld=1576464344570, lastModifiedNew=1576464399921
+
+2019-12-16 10:46:59,379 WARN [dump-ignore] ignore to save cache file. groupKey=example.properties+DEFAULT_GROUP, md5=b54f63e58da12198344316a61a93add0, lastModifiedOld=1576464344570, lastModifiedNew=1576464419241
+
+2019-12-16 10:47:23,817 WARN [dump-ignore] ignore to save cache file. groupKey=example.properties+DEFAULT_GROUP, md5=b54f63e58da12198344316a61a93add0, lastModifiedOld=1576464344570, lastModifiedNew=1576464443771
+
+2019-12-16 10:49:35,013 WARN [dump-ignore] ignore to save cache file. groupKey=example.properties+DEFAULT_GROUP, md5=25a822367cd73c79acc56da3c73fa07e, lastModifiedOld=1576464516319, lastModifiedNew=1576464574996
+
+2019-12-16 10:55:10,555 WARN [dump-ignore] ignore to save cache file. groupKey=example.yml+DEFAULT_GROUP, md5=00b77727c9b4a661b8ae12cd7de1395f, lastModifiedOld=1576231511686, lastModifiedNew=1576464910474
+
+2019-12-16 15:02:49,619 WARN [dump-ignore] ignore to save cache file. groupKey=example.properties+DEFAULT_GROUP, md5=b54f63e58da12198344316a61a93add0, lastModifiedOld=1576479728817, lastModifiedNew=1576479769592
+
+2019-12-16 15:35:02,318 WARN [dump-ignore] ignore to save cache file. groupKey=example.yml+DEFAULT_GROUP, md5=00b77727c9b4a661b8ae12cd7de1395f, lastModifiedOld=1576481256022, lastModifiedNew=1576481702237
+

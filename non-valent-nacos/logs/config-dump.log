@@ -1,0 +1,4 @@
+2019-12-17 16:24:22,295 WARN [dump-ignore] ignore to save cache file. groupKey=example.properties+DEFAULT_GROUP, md5=67de1f8fecb28c7ce5823410842ce3ec, lastModifiedOld=1576571052204, lastModifiedNew=1576571062191
+
+2019-12-17 16:34:07,920 WARN [dump-ignore] ignore to save cache file. groupKey=example.properties+DEFAULT_GROUP, md5=5d789b91514fe417f88c2c9e615c7966, lastModifiedOld=1576571395071, lastModifiedNew=1576571647851
+
