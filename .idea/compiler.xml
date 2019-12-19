@@ -7,9 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="non-valent-eureka" />
-        <module name="non-valent-cloud" />
         <module name="non-valent-nacos" />
-        <module name="non-valent-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,7 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="non-valent-cloud" options="-parameters" />
+      <module name="non-valent-cloud" options="" />
       <module name="non-valent-config" options="-parameters" />
       <module name="non-valent-eureka" options="-parameters" />
       <module name="non-valent-nacos" options="-parameters" />

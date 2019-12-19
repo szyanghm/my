@@ -4,6 +4,6 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/non-valent-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/non-valent-nacos" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/non-valent-nacos/non-valent-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/non-valent-service" charset="UTF-8" />
   </component>
 </project>
