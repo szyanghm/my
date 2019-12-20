@@ -1,0 +1,32 @@
+# 服务注册与发现相关配置
+eureka:
+  #自定义实例编号
+  instance:
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+    # 优先使用IP地址方式进行注册服务
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+  client:
+    # 服务注册地址
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8772/eureka/
+
+feign:
+  # 配置httpclient线程池
+  httpclient:
+    enabled: true
+
+logging:
+  level:
+    root: WARN
+    org:
+      springframework:
+        security: DEBUG
+        web: ERROR
+      hibernate: DEBUG
+      apache:
+        commons:
+          dbcp2: DEBUG
+
+# 是否显示swagger-ui
+swagger.show: true

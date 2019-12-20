@@ -3,11 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/non-valent-cloud.iml" filepath="$PROJECT_DIR$/non-valent-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/non-valent-common/non-valent-common.iml" filepath="$PROJECT_DIR$/non-valent-common/non-valent-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/non-valent-contract/non-valent-contract.iml" filepath="$PROJECT_DIR$/non-valent-contract/non-valent-contract.iml" />
       <module fileurl="file://$PROJECT_DIR$/non-valent-eureka/non-valent-eureka.iml" filepath="$PROJECT_DIR$/non-valent-eureka/non-valent-eureka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/non-valent-nacos/non-valent-nacos.iml" filepath="$PROJECT_DIR$/non-valent-nacos/non-valent-nacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/non-valent-service/non-valent-service.iml" filepath="$PROJECT_DIR$/non-valent-service/non-valent-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/non-valent-nacos/non-valent-service.iml" filepath="$PROJECT_DIR$/non-valent-nacos/non-valent-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/non-valent-service/non-valent-service.iml" filepath="$PROJECT_DIR$/non-valent-service/non-valent-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/non-valent-web/non-valent-web.iml" filepath="$PROJECT_DIR$/non-valent-web/non-valent-web.iml" />
     </modules>
   </component>
 </project>

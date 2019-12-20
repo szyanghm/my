@@ -3,6 +3,5 @@ server:
 spring:
   profiles:
     active: dev
-  # ·şÎñÃû³Æ£¬¼´serviceId
   application:
     name: service-producer

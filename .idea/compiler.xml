@@ -6,25 +6,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="non-valent-common" />
+        <module name="non-valent-contract" />
+        <module name="non-valent-web" />
+        <module name="non-valent-service" />
         <module name="non-valent-eureka" />
         <module name="non-valent-nacos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="non-valent-cloud" target="1.8" />
+      <module name="non-valent-common" target="1.8" />
       <module name="non-valent-config" target="1.8" />
+      <module name="non-valent-contract" target="1.8" />
       <module name="non-valent-eureka" target="1.8" />
       <module name="non-valent-nacos" target="1.8" />
       <module name="non-valent-service" target="1.8" />
+      <module name="non-valent-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="non-valent-cloud" options="" />
+      <module name="non-valent-common" options="-parameters" />
       <module name="non-valent-config" options="-parameters" />
+      <module name="non-valent-contract" options="-parameters" />
       <module name="non-valent-eureka" options="-parameters" />
       <module name="non-valent-nacos" options="-parameters" />
       <module name="non-valent-service" options="-parameters" />
+      <module name="non-valent-web" options="-parameters" />
     </option>
   </component>
 </project>
