@@ -1,9 +1,8 @@
 package com.non.valent.controller;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.non.valent.entity.Test;
 import com.non.valent.service.TestService;
+import com.non.valent.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,7 @@ public class TestController {
 
     @PostMapping(value = "/post")
     @ApiOperation(value = "Post测试", httpMethod = "POST", response = Test.class, notes = "Post测试")
-    public IPage<Test> test(@RequestBody Test test){
+    public ResultVO test(@RequestBody Test test){
         return testService.selectPageVo(test);
     }
 }
