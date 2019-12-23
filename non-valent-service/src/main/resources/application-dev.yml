@@ -50,4 +50,16 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     cache-enabled: false
 
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        security: DEBUG
+        web: ERROR
+      hibernate: DEBUG
+      apache:
+        commons:
+          dbcp2: DEBUG
+
 swagger.show: true

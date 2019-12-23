@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @version:1.0
  */
 @RestController
-@Api(description = "测试API")
 @RequestMapping(value = "/test")
 public class TestController {
 

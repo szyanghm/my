@@ -24,7 +24,7 @@ public class TestController {
     @Autowired
     private TestService testService;
 
-    @PostMapping(value = "/post")
+    @PostMapping(value = "/v1/post")
     @ApiOperation(value = "Post测试", httpMethod = "POST", response = Test.class, notes = "Post测试")
     public ResultVO test(@RequestBody Test test){
         return testService.selectPageVo(test);

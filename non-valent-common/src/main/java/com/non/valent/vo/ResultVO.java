@@ -16,7 +16,7 @@ import java.time.ZonedDateTime;
 @Getter
 public class ResultVO<T> {
 
-    public static final String SUCCESSFUL_CODE = "000000";
+    public static final String SUCCESSFUL_CODE = "200";
     public static final String SUCCESSFUL_MESG = "处理成功";
 
     @ApiModelProperty(value = "处理结果code", required = true)
@@ -62,6 +62,18 @@ public class ResultVO<T> {
         this.code = code;
         this.mesg = mesg;
         this.data = data;
+        this.time = ZonedDateTime.now().toInstant();
+    }
+
+    /**
+     * 内部使用，用于构造成功的结果
+     *
+     * @param code
+     * @param mesg
+     */
+    public ResultVO(String code, String mesg) {
+        this.code = code;
+        this.mesg = mesg;
         this.time = ZonedDateTime.now().toInstant();
     }
 

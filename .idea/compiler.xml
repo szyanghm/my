@@ -11,6 +11,7 @@
         <module name="non-valent-web" />
         <module name="non-valent-service" />
         <module name="non-valent-eureka" />
+        <module name="non-valent-gateway" />
         <module name="non-valent-nacos" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="non-valent-config" target="1.8" />
       <module name="non-valent-contract" target="1.8" />
       <module name="non-valent-eureka" target="1.8" />
+      <module name="non-valent-gateway" target="1.8" />
       <module name="non-valent-nacos" target="1.8" />
       <module name="non-valent-service" target="1.8" />
       <module name="non-valent-web" target="1.8" />
@@ -32,6 +34,7 @@
       <module name="non-valent-config" options="-parameters" />
       <module name="non-valent-contract" options="-parameters" />
       <module name="non-valent-eureka" options="-parameters" />
+      <module name="non-valent-gateway" options="-parameters" />
       <module name="non-valent-nacos" options="-parameters" />
       <module name="non-valent-service" options="-parameters" />
       <module name="non-valent-web" options="-parameters" />

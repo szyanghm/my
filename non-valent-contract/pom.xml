@@ -16,7 +16,6 @@
 
 	<properties>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>com.non.valent</groupId>

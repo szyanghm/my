@@ -16,9 +16,13 @@ feign:
   httpclient:
     enabled: true
 
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
 logging:
   level:
-    root: WARN
+    root: info
     org:
       springframework:
         security: DEBUG

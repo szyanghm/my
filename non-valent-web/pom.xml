@@ -15,7 +15,6 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<feign-httpclient.version>8.18.0</feign-httpclient.version>
 	</properties>
 
 	<dependencies>
@@ -31,9 +30,13 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.netflix.feign</groupId>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
 			<artifactId>feign-httpclient</artifactId>
-			<version>${feign-httpclient.version}</version>
 		</dependency>
 
 		<dependency>
@@ -44,6 +47,11 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
 		</dependency>
 
 		<dependency>
