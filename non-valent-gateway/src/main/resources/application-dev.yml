@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: non-valent-web
+          uri: lb://non-valent-web
+          filters:
+            - SetStatus=401

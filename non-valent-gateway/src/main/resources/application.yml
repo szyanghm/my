@@ -4,4 +4,4 @@ spring:
   profiles:
     active: dev
   application:
-    name: non-valent-service
+    name: non-valent-gateway

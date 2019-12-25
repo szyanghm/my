@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @date:2019/12/19 17:11
  * @version:1.0
  */
-@FeignClient(name = "service-producer")
+@FeignClient(name = "non-valent-service")
 @RequestMapping(value = "/test")
 public interface TestService {
 
