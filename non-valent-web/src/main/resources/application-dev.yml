@@ -34,3 +34,5 @@ logging:
 
 # 是否显示swagger-ui
 swagger.show: true
+
+redis_prefix: non_valent_

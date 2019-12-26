@@ -45,6 +45,11 @@
 			<artifactId>spring-cloud-gateway-core</artifactId>
 			<scope>compile</scope>
 		</dependency>
+		<!--redis start-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
 	</dependencies>
 
 

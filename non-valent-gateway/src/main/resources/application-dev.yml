@@ -1,8 +1,20 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: non-valent-web
-          uri: lb://non-valent-web
-          filters:
-            - SetStatus=401
+feign:
+  # 配置httpclient线程池
+  httpclient:
+    enabled: true
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        security: DEBUG
+        web: ERROR
+      hibernate: DEBUG
+      apache:
+        commons:
+          dbcp2: DEBUG
+
+# 是否显示swagger-ui
+swagger.show: false
+
+redis_prefix: non_valent_
