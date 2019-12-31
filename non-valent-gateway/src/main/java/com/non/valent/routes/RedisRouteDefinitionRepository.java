@@ -1,6 +1,6 @@
 package com.non.valent.routes;
 
-import com.non.valent.service.RouteService;
+import com.non.valent.service.impl.RouteService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteDefinition;
@@ -25,7 +25,7 @@ public class RedisRouteDefinitionRepository implements RouteDefinitionRepository
 
     @Override
     public Flux<RouteDefinition> getRouteDefinitions() {
-        Collection<RouteDefinition> collection = (Collection<RouteDefinition>)routeService.getRouteDefinitions().getData();
+        Collection<RouteDefinition> collection = routeService.getRouteDefinitions();
         return Flux.fromIterable(collection);
     }
 

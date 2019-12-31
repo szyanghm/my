@@ -1,4 +1,24 @@
-
+jetcache:
+  statIntervalMinutes: 15
+  areaInCacheName: false
+  local:
+    # 默认永久本地缓存
+    default:
+      type: caffeine
+      keyConvertor: fastjson
+  remote:
+    # 默认永久的远程缓存
+    default:
+      type: redis
+      keyConvertor: fastjson
+      valueEncoder: kryo
+      valueDecoder: kryo
+      poolConfig:
+        minIdle: 5
+        maxIdle: 20
+        maxTotal: 50
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
 feign:
   # 配置httpclient线程池
   httpclient:
@@ -28,6 +48,6 @@ eureka:
       defaultZone: http://127.0.0.1:8772/eureka/
 
 # 是否显示swagger-ui
-swagger.show: false
+swagger.show: true
 
 redis_prefix: non_valent_
