@@ -1,21 +1,21 @@
 package com.non.valent.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.non.valent.dto.GatewayRouteQueryDTO;
 import com.non.valent.entity.GatewayRoute;
 import com.non.valent.entity.Test;
 import com.non.valent.service.impl.GatewayRouteService;
 import com.non.valent.service.impl.TestService;
-import com.non.valent.vo.GatewayRouteVO;
+import com.non.valent.utils.FileUtils;
 import com.non.valent.vo.ResultVO;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.constraints.Pattern;
-import java.util.List;
+import java.io.File;
 
 /**
  * @author haimiyang
@@ -50,5 +50,12 @@ public class TestController {
     @ApiOperation(value = "Get测试", httpMethod = "GET",  notes = "Get测试")
     public ResultVO overload() {
         return ResultVO.success(gatewayRouteService.overload());
+    }
+
+    @PostMapping(value = "/fileUpload",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @ApiOperation(value = "Post测试", httpMethod = "POST", response = Test.class, notes = "Post测试")
+    public ResultVO fileUpload(@RequestPart("file") MultipartFile file){
+        File f = FileUtils.multipartFileToFile(file);
+        return ResultVO.success("111111111111111111");
     }
 }

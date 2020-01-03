@@ -1,6 +1,7 @@
 package com.non.valent.config;
 
 import com.alibaba.fastjson.annotation.JSONField;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyName;
 import com.fasterxml.jackson.databind.introspect.Annotated;

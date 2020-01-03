@@ -1,9 +1,10 @@
 package com.non.valent.aspect;
 
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.common.collect.Maps;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.non.valent.exception.Serializer;
 import com.non.valent.utils.HttpUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -55,7 +56,8 @@ public class WebLogAspect {
         params.put("【ip】", HttpUtils.getIpAddr(request)); // 获取请求的ip地址
         params.put("【className】", joinPoint.getSignature().getDeclaringTypeName()); // 获取类名
         params.put("【classMethod】", joinPoint.getSignature().getName()); // 获取类方法
-        params.put("【request args】", Serializer.serialize(joinPoint.getArgs())); // 请求参数
+        params.put("【request args】", new Gson().toJson(joinPoint.getArgs())); // 请求参数
+
     }
 
     /**
@@ -66,8 +68,9 @@ public class WebLogAspect {
     @After("webLog()")
     public void doAfter() throws Throwable {
         // 输出格式化后的json字符串
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        log.info(gson.toJson(params));
+        log.info( JSONObject.toJSONString(params, SerializerFeature.PrettyFormat, SerializerFeature.WriteMapNullValue,
+                SerializerFeature.WriteDateUseDateFormat));
+        //log.info(gson.toJson(params));
         //清空每次内容
         params.clear();
         // 每个请求之间空一行

@@ -13,4 +13,5 @@ import lombok.Data;
 public class Test {
     private String id;
     private String userId;
+    private String file;
 }

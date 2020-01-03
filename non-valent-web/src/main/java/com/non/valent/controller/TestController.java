@@ -6,10 +6,9 @@ import com.non.valent.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author haimiyang
@@ -28,5 +27,12 @@ public class TestController {
     @ApiOperation(value = "Post测试", httpMethod = "POST", response = Test.class, notes = "Post测试")
     public ResultVO test(@RequestBody Test test){
         return testService.selectPageVo(test);
+    }
+
+    @PostMapping(value = "/v1/fileUpload",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @ApiOperation(value = "Post测试", httpMethod = "POST", response = MultipartFile.class, notes = "Post测试")
+    public ResultVO fileUpload(@RequestPart("file") MultipartFile file) {
+        ResultVO resultVO = testService.fileUpload(file);
+        return resultVO;
     }
 }

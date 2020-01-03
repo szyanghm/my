@@ -3,9 +3,9 @@ package com.non.valent.service;
 import com.non.valent.entity.Test;
 import com.non.valent.vo.ResultVO;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author haimiyang
@@ -18,4 +18,7 @@ public interface TestService {
 
     @PostMapping(value = "/post")
     ResultVO selectPageVo(@RequestBody Test test);
+
+    @PostMapping(value = "/fileUpload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    ResultVO fileUpload(@RequestPart("file") MultipartFile file);
 }

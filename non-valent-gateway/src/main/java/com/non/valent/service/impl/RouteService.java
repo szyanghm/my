@@ -5,7 +5,7 @@ import com.alicp.jetcache.anno.CacheType;
 import com.alicp.jetcache.anno.CreateCache;
 import com.non.valent.service.IRouteService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -50,7 +50,7 @@ public class RouteService implements IRouteService {
         log.info("预计初使化路由, gatewayKeys：{}", gatewayKeys);
         // 去掉key的前缀
         Set<String> gatewayKeyIds = gatewayKeys.stream().map(key -> {
-            return key.replace(GATEWAY_ROUTES, StringUtils.EMPTY);
+            return key.replace(GATEWAY_ROUTES, "");
         }).collect(Collectors.toSet());
         Map<String, RouteDefinition> allRoutes = gatewayRouteCache.getAll(gatewayKeyIds);
         log.info("gatewayKeys：{}", allRoutes);
