@@ -1,7 +1,6 @@
 package com.non.valent.config;
 
 import com.alibaba.fastjson.annotation.JSONField;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyName;
 import com.fasterxml.jackson.databind.introspect.Annotated;
@@ -13,7 +12,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.request.async.DeferredResult;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.schema.configuration.ObjectMapperConfigured;
@@ -27,7 +25,7 @@ import java.lang.annotation.Annotation;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig extends WebMvcConfigurerAdapter {
+public class SwaggerConfig {
 
     @Value("${swagger.show}")
     private boolean enableSwagger;
@@ -42,9 +40,6 @@ public class SwaggerConfig extends WebMvcConfigurerAdapter {
         ObjectMapper objectMapper = new ObjectMapper();
         SimpleModule module = new SimpleModule();
         objectMapper.registerModule(module);
-
-        JacksonAnnotationIntrospector jacksonAnnotationIntrospector=  new JacksonAnnotationIntrospector();
-
         objectMapper.setAnnotationIntrospector(new JacksonAnnotationIntrospector() {
 
             @Override
@@ -94,8 +89,12 @@ public class SwaggerConfig extends WebMvcConfigurerAdapter {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("应用框架").description("平台接口文档").termsOfServiceUrl("")
-                .contact("dragon").version("1.0").build();
+        return new ApiInfoBuilder()
+                .title("系统管理API")
+                .description("平台接口文档")
+                .termsOfServiceUrl("")
+                .version("2.0")
+                .build();
     }
 
 
