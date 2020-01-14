@@ -32,9 +32,9 @@ public class TestController {
 
     @Autowired
     private GatewayRouteService gatewayRouteService;
-
+//
     @Autowired
-    private ElasticsearchService elasticsearchService;
+    private ElasticsearchService elasticService;
 
     @PostMapping(value = "/post")
     @ApiOperation(value = "Post测试", httpMethod = "POST", response = Test.class, notes = "Post测试")
@@ -64,18 +64,21 @@ public class TestController {
 
     @GetMapping("/init")
     public void init(){
-        elasticsearchService.createIndex();
+        //elasticService.createIndex();
         List<Test> list =new ArrayList<>();
-        list.add(new Test("123","XX0193","XX8064","0"));
-        list.add(new Test("456","XX0210","XX7475","0"));
-        list.add(new Test("789","XX0257","XX8097","0"));
-        elasticsearchService.saveAll(list);
-
+        list.add(new Test("123","XX0193","XX8064",0));
+        list.add(new Test("456","XX0210","XX7475",0));
+        list.add(new Test("789","XX0257","XX8097",0));
+        elasticService.saveAll(list);
     }
 
     @GetMapping("/all")
-    public Iterator<Test> all(){
-        return elasticsearchService.findAll();
+    public ResultVO all(){
+        List<Test> iterator = elasticService.findAll();
+        return ResultVO.success(iterator);
+    }
+
+    public static void main(String[] args) {
     }
 
 }

@@ -25,9 +25,9 @@ spring:
         max-active: 300
   elasticsearch:
     rest:
-      uris: http://localhost:9200
-      password: 123456
-      username: elastic
+      uris: http://192.168.80.128:9200
+#      password: 123456
+#      username: elastic
 jetcache:
   statIntervalMinutes: 15
   areaInCacheName: false

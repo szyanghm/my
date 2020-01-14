@@ -3,6 +3,7 @@ package com.non.valent.entity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 import org.springframework.data.elasticsearch.annotations.Document;
 
@@ -13,13 +14,14 @@ import org.springframework.data.elasticsearch.annotations.Document;
  */
 @Data
 @TableName("t_user")
+@NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
-@Document(indexName = "logstash-2020.01.10-000001",type = "_doc", shards = 1, replicas = 0)
+@Document(indexName = "logstash-2020.01.10-000001",type = "doc", shards = 1, replicas = 0)
 public class Test {
 
     private String id;
     private String userId;
     private String file;
-    private String delFag;
+    private int delFag;
 }

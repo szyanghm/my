@@ -1,9 +1,7 @@
 package com.non.valent.service;
 
 import com.non.valent.entity.Test;
-import org.springframework.data.domain.Page;
 
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -13,21 +11,21 @@ import java.util.List;
  */
 public interface IElasticsearchService {
 
-    void createIndex();
-
-    void deleteIndex(String index);
+//    void createIndex();
+//
+//    void deleteIndex(String index);
 
     void save(Test test);
 
     void saveAll(List<Test> list);
 
-    Iterator<Test> findAll();
+    List<Test> findAll();
 
-    Page<Test> findByContent(String content);
-
-    Page<Test> findByFirstCode(String firstCode);
-
-    Page<Test> findBySecordCode(String secordCode);
-
-    Page<Test> query(String key);
+//    Page<Test> findByContent(String content);
+//
+//    Page<Test> findByFirstCode(String firstCode);
+//
+//    Page<Test> findBySecordCode(String secordCode);
+//
+//    Page<Test> query(String key);
 }

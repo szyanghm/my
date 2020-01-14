@@ -13,6 +13,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class ServiceApplication {
 
 	public static void main(String[] args) {
+		//看这里，加上这句话
+		System.setProperty("es.set.netty.runtime.available.processors","false");
 		SpringApplication.run(ServiceApplication.class, args);
 	}
 
