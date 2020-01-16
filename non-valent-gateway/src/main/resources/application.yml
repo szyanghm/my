@@ -5,3 +5,8 @@ spring:
     active: dev
   application:
     name: non-valent-gateway
+  #jwt的密钥
+  security:
+    oauth2:
+      jwt:
+        signingKey: 123456

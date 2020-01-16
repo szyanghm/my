@@ -27,8 +27,19 @@
 		</dependency>
 		<dependency>
 			<groupId>com.non.valent</groupId>
+			<artifactId>non-valent-contract</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.non.valent</groupId>
 			<artifactId>non-valent-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!--oauth2认证-->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
 		</dependency>
 <!--		<dependency>-->
 <!--			<groupId>org.apache.httpcomponents</groupId>-->

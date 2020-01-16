@@ -13,11 +13,13 @@
         <module name="non-valent-gateway" />
         <module name="non-valent-eureka" />
         <module name="non-valent-service" />
+        <module name="non-valent-auth" />
         <module name="non-valent-nacos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gateway" target="1.8" />
+      <module name="non-valent-auth" target="1.8" />
       <module name="non-valent-cloud" target="1.8" />
       <module name="non-valent-common" target="1.8" />
       <module name="non-valent-config" target="1.8" />
@@ -32,6 +34,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gateway" options="-parameters" />
+      <module name="non-valent-auth" options="-parameters" />
       <module name="non-valent-cloud" options="" />
       <module name="non-valent-common" options="-parameters" />
       <module name="non-valent-config" options="-parameters" />

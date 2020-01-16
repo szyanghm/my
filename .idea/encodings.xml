@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/non-valent-auth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/non-valent-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/non-valent-contract" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/non-valent-eureka" charset="UTF-8" />
