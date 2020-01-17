@@ -1,4 +1,9 @@
 spring:
+  #jwt的密钥
+  security:
+    oauth2:
+      jwt:
+        signingKey: 123456
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://192.168.80.128:3306/mydb?serverTimezone=UTC&characterEncoding=utf-8&useSSL=false&&allowMultiQueries=true
@@ -87,6 +92,11 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false
+
+gate:
+  ignore:
+    authentication:
+      startWith: /oauth,/open
 
 logging:
   level:
